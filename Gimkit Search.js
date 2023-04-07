@@ -21,6 +21,19 @@ window.gimkitSearch.run = function(showError = true) {
     window.gimkitSearch.activeWindow.location.href = url;
     window.gimkitSearch.activeWindow.focus();
 }
+window.gimkitSearch.save = function() {
+    let elms = document.querySelectorAll(".notranslate.lang-en");
+    let title = elms[0].innerText;
+    for(var i = 1; i<elms.length; i++) {
+        let elm = elms[i];
+        let text = elm.innerText;
+        console.log("loaded", title, text);
+        let parent = elm.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+        parent.addEventListener("click",function(){
+            console.log("clicked", title, text);
+        })
+    }
+}
 window.gimkitSearch.setup = function() {
     console.log("loading gimkitSearch");
     window.gimkitSearch.button = document.createElement("button");

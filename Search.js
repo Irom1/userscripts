@@ -11,7 +11,7 @@ let neeva = "https://neeva.com/search?q=";
 if(false && location.host == "duckduckgo.com") {
     location.href = location.href.replace("https://duckduckgo.com/?q=", neeva);
 }
-if(true && location.host == "duckduckgo.com") {
+if(false && location.host == "duckduckgo.com") {
     let url = bing + term;
     let x = window.open(url, "_blank");
     setTimeout(function() {
